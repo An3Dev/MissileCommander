@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour {
 
-    public Behaviour[] scriptsToDisable;
+    //public Behaviour[] scriptsToDisable;
 
     public Rigidbody2D rb;
 	// Use this for initialization

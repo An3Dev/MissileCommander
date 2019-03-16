@@ -20,10 +20,12 @@ public class MissileCollision : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+   
+
+    private void OnTriggerEnter2D(Collider2D collider)
     {
 
-        if (collision.collider.tag == "Target")
+        if (collider.tag == "Target")
         {
             // Disable camera follow to prevent error
             cameraFollowMissile.enabled = false;
@@ -35,14 +37,14 @@ public class MissileCollision : MonoBehaviour {
             gameObject.SetActive(false);
 
             // Make the target dissappear
-            collision.collider.gameObject.SetActive(false);
+            collider.gameObject.SetActive(false);
 
 
             canvasAnimator.SetTrigger("LevelComplete");
         }
 
 
-        if (collision.collider.tag == "DestroyMissile" && !gameOver)
+        if (collider.tag == "DestroyMissile" && !gameOver)
         {
 
             gameOver = true;

@@ -30,11 +30,11 @@ public class MovingBarrier : MonoBehaviour {
         }
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
         
-        if (collision.collider.tag == "DestroyMissile")
+        if (collision.tag == "DestroyMissile")
         {
             switch(movingRight)
             {

@@ -12,23 +12,27 @@ public class MissileControls : MonoBehaviour {
 		
 	}
 
-
+    public void FixedUpdate()
+    {
+        rb.velocity = rb.transform.right * forwardForce;
+        
+    }
 
     // Update is called once per frame
     void Update () {
-
-        rb.velocity = rb.transform.right * forwardForce;
+        
 
         // Move to left
         if (Input.GetAxisRaw("Horizontal") == -1)
         {
             rb.MoveRotation(rb.rotation + rotationalForce * Time.deltaTime);
-
+            
         } 
         // Move to right
         if (Input.GetAxisRaw("Horizontal") == 1)
         {
             rb.MoveRotation(rb.rotation + -rotationalForce * Time.deltaTime);
+            
 
         }
 

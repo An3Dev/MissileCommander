@@ -11,7 +11,7 @@ public class FPS : MonoBehaviour {
     public void Update()
     {
 
-        Application.targetFrameRate = 80;
+        Application.targetFrameRate = 60;
         float current = 0;
         current = Time.frameCount / Time.time;
         avgFrameRate = (int)current;

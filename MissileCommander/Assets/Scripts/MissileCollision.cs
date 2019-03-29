@@ -6,10 +6,12 @@ public class MissileCollision : MonoBehaviour {
 
     public Rigidbody2D rb;
     public CameraFollowMissile cameraFollowMissile;
-
+    public MissileExhaustControl missileExhaustControl;
     public Animator canvasAnimator;
 
     public bool gameOver = false;
+
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -24,6 +26,11 @@ public class MissileCollision : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+
+        if (collider.tag == "Booster")
+        {
+            BoostMissile();
+        }
 
         if (collider.tag == "Target")
         {
@@ -61,6 +68,11 @@ public class MissileCollision : MonoBehaviour {
             canvasAnimator.SetTrigger("GameOver");
             
         }
+    }
+
+    void BoostMissile()
+    {
+        missileExhaustControl.isBoosting = true;
     }
 
     

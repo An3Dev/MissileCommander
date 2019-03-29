@@ -6,7 +6,6 @@ public class CameraFollowMissile : MonoBehaviour {
 
     
     public Transform missile;
-    public Rigidbody2D rb;
     public float smoothness = 0.1f;
 	// Use this for initialization
 	void Start () {

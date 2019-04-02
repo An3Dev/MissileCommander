@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class FPS : MonoBehaviour {
 
-    public int avgFrameRate;
+    int avgFrameRate;
     public Text display_Text;
+    public int targetFrameRate = 60;
 
     public void Update()
     {
 
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = targetFrameRate;
         float current = 0;
         current = Time.frameCount / Time.time;
         avgFrameRate = (int)current;

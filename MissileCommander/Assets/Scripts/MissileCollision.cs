@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MissileCollision : MonoBehaviour {
 
+    public ParticleSystem explosionPrefab;
     public Rigidbody2D rb;
     public CameraFollowMissile cameraFollowMissile;
     public MissileExhaustControl missileExhaustControl;
@@ -22,17 +23,14 @@ public class MissileCollision : MonoBehaviour {
 		
 	}
 
-   
-
-    private void OnTriggerEnter2D(Collider2D collider)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-
-        if (collider.tag == "Booster")
+        if (collision.collider.tag == "Booster")
         {
             BoostMissile();
         }
 
-        if (collider.tag == "Target")
+        if (collision.collider.tag == "Target")
         {
             // Disable camera follow to prevent error
             cameraFollowMissile.enabled = false;
@@ -44,14 +42,14 @@ public class MissileCollision : MonoBehaviour {
             gameObject.SetActive(false);
 
             // Make the target dissappear
-            collider.gameObject.SetActive(false);
+            collision.gameObject.SetActive(false);
 
 
             canvasAnimator.SetTrigger("LevelComplete");
         }
 
 
-        if (collider.tag == "DestroyMissile" && !gameOver)
+        if (collision.collider.tag == "DestroyMissile" && !gameOver)
         {
 
             gameOver = true;
@@ -65,10 +63,16 @@ public class MissileCollision : MonoBehaviour {
             // Make the missile dissappear
             gameObject.SetActive(false);
 
-            canvasAnimator.SetTrigger("GameOver");
             
+            ParticleSystem explosion = (Instantiate(explosionPrefab, collision.GetContact(0).point, Quaternion.identity)).GetComponent<ParticleSystem>();
+
+            explosion.Play();
+
+            canvasAnimator.SetTrigger("GameOver");
         }
+
     }
+
 
     void BoostMissile()
     {

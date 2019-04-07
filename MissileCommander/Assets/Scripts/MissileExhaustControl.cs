@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MissileExhaustControl : MonoBehaviour {
+public class MissileExhaustControl : MonoBehaviour
+{
 
     public ParticleSystem exhaust;
     public MissileControls missileControls;
@@ -13,12 +14,14 @@ public class MissileExhaustControl : MonoBehaviour {
     bool modifiedSpeed = false;
     float timeBoosting;
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (timeBoosting >= boostTime)
         {
             missileControls.forwardForce /= 2;
@@ -29,7 +32,7 @@ public class MissileExhaustControl : MonoBehaviour {
             modifiedSpeed = false;
         }
 
-		if (isBoosting)
+        if (isBoosting)
         {
             timeBoosting += Time.deltaTime;
 
@@ -40,5 +43,5 @@ public class MissileExhaustControl : MonoBehaviour {
                 modifiedSpeed = true;
             }
         }
-	}
+    }
 }

@@ -262,7 +262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mission Complete
+  m_Text: Portal Reached
 --- !u!222 &74019145
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mission Failed
+  m_Text: Missile Crashed
 --- !u!222 &638829603
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -985,6 +985,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114847200414932588, guid: 0e79314d692b7124a83bad1705ae1120,
+        type: 2}
+      propertyPath: m_Text
+      value: Portal Reached
+      objectReference: {fileID: 0}
+    - target: {fileID: 114991535004710336, guid: 0e79314d692b7124a83bad1705ae1120,
+        type: 2}
+      propertyPath: m_Text
+      value: Missile Crashed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e79314d692b7124a83bad1705ae1120, type: 2}
   m_IsPrefabAsset: 0

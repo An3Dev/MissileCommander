@@ -23,12 +23,17 @@ public class MissileCollision : MonoBehaviour {
 		
 	}
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.tag == "Booster")
+
+        if (collision.tag == "Booster")
         {
             BoostMissile();
         }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
 
         if (collision.collider.tag == "Target")
         {

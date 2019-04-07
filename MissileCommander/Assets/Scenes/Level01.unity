@@ -500,6 +500,31 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 119533587}
   m_CullTransparentMesh: 0
+--- !u!1 &156075333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1913273479141738, guid: d7a67b9882d5c4c4a93c37f41d14132e,
+    type: 2}
+  m_PrefabInternal: {fileID: 553611006}
+--- !u!114 &156075336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156075333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6058c6d8c3456c44f9cdc9baf49cef9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exhaust: {fileID: 156075337}
+  missileControls: {fileID: 903332802}
+  isBoosting: 0
+  boostTime: 5
+--- !u!198 &156075337 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198298939433575682, guid: d7a67b9882d5c4c4a93c37f41d14132e,
+    type: 2}
+  m_PrefabInternal: {fileID: 553611006}
 --- !u!1 &171228679
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +864,19 @@ Prefab:
       propertyPath: canvasAnimator
       value: 
       objectReference: {fileID: 2065452527}
-    m_RemovedComponents: []
+    - target: {fileID: 114150433212626586, guid: d7a67b9882d5c4c4a93c37f41d14132e,
+        type: 2}
+      propertyPath: missileExhaustControl
+      value: 
+      objectReference: {fileID: 156075336}
+    - target: {fileID: 114150433212626586, guid: d7a67b9882d5c4c4a93c37f41d14132e,
+        type: 2}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 198303040935241836, guid: 5bd97f9b76514b24dac1d7af21e857e4,
+        type: 2}
+    m_RemovedComponents:
+    - {fileID: 114832531350642058, guid: d7a67b9882d5c4c4a93c37f41d14132e, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d7a67b9882d5c4c4a93c37f41d14132e, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &638829600
@@ -912,7 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Spaceship Crashed
+  m_Text: Missile Crashed
 --- !u!222 &638829603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1198,6 +1235,12 @@ Transform:
   m_Father: {fileID: 2065452531}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &903332802 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114064146876403644, guid: d7a67b9882d5c4c4a93c37f41d14132e,
+    type: 2}
+  m_PrefabInternal: {fileID: 553611006}
+  m_Script: {fileID: 11500000, guid: 863e59e8daa20eb4ba44f491b99a4e80, type: 3}
 --- !u!1001 &918986271
 Prefab:
   m_ObjectHideFlags: 0

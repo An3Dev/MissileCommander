@@ -949,6 +949,16 @@ Prefab:
       propertyPath: m_Text
       value: Missile Crashed
       objectReference: {fileID: 0}
+    - target: {fileID: 224368500019343174, guid: 0e79314d692b7124a83bad1705ae1120,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -27.199951
+      objectReference: {fileID: 0}
+    - target: {fileID: 224368500019343174, guid: 0e79314d692b7124a83bad1705ae1120,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -30.700012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e79314d692b7124a83bad1705ae1120, type: 2}
   m_IsPrefabAsset: 0
@@ -961,7 +971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939597064}
   m_Layer: 0
-  m_Name: Environment(Make it spell AN3)
+  m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -999,7 +1009,6 @@ Transform:
   - {fileID: 863202079}
   - {fileID: 1662391723}
   - {fileID: 1553877386}
-  - {fileID: 1565938529}
   - {fileID: 1327195770}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1417,7 +1426,7 @@ Transform:
   m_LocalScale: {x: 47.355, y: 29.814999, z: 1}
   m_Children: []
   m_Father: {fileID: 939597064}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1327195771
 BoxCollider2D:
@@ -2152,67 +2161,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1565938528
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 939597064}
-    m_Modifications:
-    - target: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -9.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 435
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_RootOrder
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 1508181341623446, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-      propertyPath: m_Name
-      value: MovingBarrierObject (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114977807350922338, guid: 8d09da2921e89324c8df8848bc239379,
-        type: 2}
-      propertyPath: speed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 61838086593314012, guid: 8d09da2921e89324c8df8848bc239379,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8d09da2921e89324c8df8848bc239379, type: 2}
-  m_IsPrefabAsset: 0
---- !u!4 &1565938529 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4970701449472066, guid: 8d09da2921e89324c8df8848bc239379,
-    type: 2}
-  m_PrefabInternal: {fileID: 1565938528}
 --- !u!1 &1585891461
 GameObject:
   m_ObjectHideFlags: 0

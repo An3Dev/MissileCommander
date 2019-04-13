@@ -7,7 +7,7 @@ TagManager:
   - DestroyMissile
   - Target
   - Booster
-  - Normalizer
+  - AntiBooster
   layers:
   - Default
   - TransparentFX

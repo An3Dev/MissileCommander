@@ -7,11 +7,12 @@ public class MissileExhaustControl : MonoBehaviour
 
     public ParticleSystem exhaust;
     public MissileControls missileControls;
-    public bool isBoosting = false;
+    
 
     public float boostTime = 5;
 
-    bool modifiedSpeed = false;
+    bool startedBoost = false;
+    bool stoppedBoost = false;
     float timeBoosting;
     // Use this for initialization
     void Start()
@@ -19,29 +20,27 @@ public class MissileExhaustControl : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartBoosting()
     {
-        if (timeBoosting >= boostTime)
+        if (!startedBoost)
+        {
+            missileControls.forwardForce *= 2;
+            missileControls.rotationalForce *= 2;
+            startedBoost = true;
+            stoppedBoost = false;
+        }
+    }
+
+    public void StopBoost()
+    {
+        if (!stoppedBoost)
         {
             missileControls.forwardForce /= 2;
             missileControls.rotationalForce /= 2;
 
-            isBoosting = false;
-            timeBoosting = 0;
-            modifiedSpeed = false;
+            startedBoost = false;
+            stoppedBoost = true;
         }
-
-        if (isBoosting)
-        {
-            timeBoosting += Time.deltaTime;
-
-            if (!modifiedSpeed)
-            {
-                missileControls.forwardForce *= 2;
-                missileControls.rotationalForce *= 2;
-                modifiedSpeed = true;
-            }
-        }
+       
     }
 }

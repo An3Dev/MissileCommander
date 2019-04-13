@@ -23,18 +23,18 @@ public class MissileControls : MonoBehaviour {
         
 
         // Move to left
-        if (Input.GetAxisRaw("Horizontal") == -1)
+        if (Input.GetAxisRaw("Horizontal") != 0)
         {
-            rb.MoveRotation(rb.rotation + rotationalForce * Time.deltaTime);
+            rb.MoveRotation(rb.rotation + Input.GetAxisRaw("Horizontal") * -rotationalForce * Time.deltaTime);
             
         } 
-        // Move to right
-        if (Input.GetAxisRaw("Horizontal") == 1)
-        {
-            rb.MoveRotation(rb.rotation + -rotationalForce * Time.deltaTime);
+        //// Move to right
+        //if (Input.GetAxisRaw("Horizontal") == 1)
+        //{
+        //    rb.MoveRotation(rb.rotation + -rotationalForce * Time.deltaTime);
             
 
-        }
+        //}
 
         // If touch detected
         if (Input.touchCount > 0)

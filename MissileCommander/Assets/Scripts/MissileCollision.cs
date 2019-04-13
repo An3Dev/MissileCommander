@@ -30,6 +30,11 @@ public class MissileCollision : MonoBehaviour {
         {
             BoostMissile();
         }
+
+        if (collision.tag == "AntiBooster")
+        {
+            SlowDownMissile();
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -81,7 +86,12 @@ public class MissileCollision : MonoBehaviour {
 
     void BoostMissile()
     {
-        missileExhaustControl.isBoosting = true;
+        missileExhaustControl.StartBoosting();
+    }
+
+    void SlowDownMissile()
+    {
+        missileExhaustControl.StopBoost();
     }
 
     

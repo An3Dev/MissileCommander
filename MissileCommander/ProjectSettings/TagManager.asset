@@ -8,6 +8,7 @@ TagManager:
   - Target
   - Booster
   - AntiBooster
+  - Canvas
   layers:
   - Default
   - TransparentFX

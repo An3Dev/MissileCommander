@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114150433212626586}
   m_Layer: 0
   m_Name: Missile
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +232,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1599374631197862}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 4.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4526417055844722}
@@ -418,9 +418,11 @@ MonoBehaviour:
   explosionPrefab: {fileID: 198303040935241836, guid: 5bd97f9b76514b24dac1d7af21e857e4,
     type: 2}
   rb: {fileID: 50323157007190078}
-  cameraFollowMissile: {fileID: 0}
+  cameraFollowMissile: {fileID: 114120282679632990, guid: 9e5f687f87434034aa34ac319c0ce61a,
+    type: 2}
   missileExhaustControl: {fileID: 114365219806807896}
-  canvasAnimator: {fileID: 0}
+  canvasAnimator: {fileID: 95981038502901848, guid: 0e79314d692b7124a83bad1705ae1120,
+    type: 2}
   gameOver: 0
 --- !u!114 &114365219806807896
 MonoBehaviour:
@@ -435,7 +437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exhaust: {fileID: 198298939433575682}
   missileControls: {fileID: 114064146876403644}
-  isBoosting: 0
   boostTime: 15
 --- !u!198 &198298939433575682
 ParticleSystem:

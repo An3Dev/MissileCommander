@@ -5,23 +5,24 @@ using UnityEngine;
 public class CameraFollowMissile : MonoBehaviour {
 
     
-    public Transform missile;
-    public float smoothness = 0.1f;
+    Transform missile;
+    float smoothness = 0.1f;
 	// Use this for initialization
 	void Start () {
-		
+         missile = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (missile)
-        {
-            Vector3 from = transform.position;
-            Vector3 to = missile.position;
-            to.z = transform.position.z;
+        transform.position = new Vector3(missile.transform.position.x, missile.transform.position.y, -10);
+        //if (missile)
+        //{
+        //    Vector3 from = transform.position;
+        //    Vector3 to = missile.position;
+        //    to.z = transform.position.z;
 
-            transform.position -= (from - to);
-        }
+        //    transform.position -= (from - to);
+        //}
 
     }
 }

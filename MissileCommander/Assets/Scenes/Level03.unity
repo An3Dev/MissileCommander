@@ -368,7 +368,7 @@ Prefab:
         type: 2}
       propertyPath: canvasAnimator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2071328405}
     - target: {fileID: 114150433212626586, guid: d7a67b9882d5c4c4a93c37f41d14132e,
         type: 2}
       propertyPath: explosionPrefab
@@ -775,16 +775,6 @@ Prefab:
       propertyPath: missile
       value: 
       objectReference: {fileID: 73415274}
-    - target: {fileID: 114120282679632990, guid: 9e5f687f87434034aa34ac319c0ce61a,
-        type: 2}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114120282679632990, guid: 9e5f687f87434034aa34ac319c0ce61a,
-        type: 2}
-      propertyPath: smoothness
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e5f687f87434034aa34ac319c0ce61a, type: 2}
   m_IsPrefabAsset: 0
@@ -1179,6 +1169,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2071328405 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95981038502901848, guid: 0e79314d692b7124a83bad1705ae1120,
+    type: 2}
+  m_PrefabInternal: {fileID: 551719394}
 --- !u!1 &2090552880
 GameObject:
   m_ObjectHideFlags: 0

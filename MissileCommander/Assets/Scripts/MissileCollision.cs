@@ -5,18 +5,21 @@ using UnityEngine;
 public class MissileCollision : MonoBehaviour {
 
     public ParticleSystem explosionPrefab;
-    public Rigidbody2D rb;
-    public CameraFollowMissile cameraFollowMissile;
-    public MissileExhaustControl missileExhaustControl;
-    public Animator canvasAnimator;
+    Rigidbody2D rb;
+    CameraFollowMissile cameraFollowMissile;
+    MissileExhaustControl missileExhaustControl;
+    Animator canvasAnimator;
 
     public bool gameOver = false;
 
     
 	// Use this for initialization
 	void Start () {
-		
-	}
+        rb = GetComponent<Rigidbody2D>();
+        cameraFollowMissile = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollowMissile>();
+        missileExhaustControl = GetComponentInChildren<MissileExhaustControl>();
+        canvasAnimator = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {

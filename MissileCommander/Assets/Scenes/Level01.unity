@@ -287,15 +287,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1868786153785116, guid: b3036b2aa1b12b2488abd545ac59c276, type: 2}
-      propertyPath: m_Name
-      value: Portal
-      objectReference: {fileID: 0}
-    - target: {fileID: 61893365478987790, guid: b3036b2aa1b12b2488abd545ac59c276,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3036b2aa1b12b2488abd545ac59c276, type: 2}
   m_IsPrefabAsset: 0
@@ -829,11 +820,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4751084305062112, guid: d7a67b9882d5c4c4a93c37f41d14132e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4751084305062112, guid: d7a67b9882d5c4c4a93c37f41d14132e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.4
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 4751084305062112, guid: d7a67b9882d5c4c4a93c37f41d14132e, type: 2}
       propertyPath: m_LocalPosition.z

@@ -9,6 +9,7 @@ public class MissileCollision : MonoBehaviour {
     CameraFollowMissile cameraFollowMissile;
     MissileExhaustControl missileExhaustControl;
     Animator canvasAnimator;
+    Animator portalAnimator;
 
     public bool gameOver = false;
 
@@ -19,6 +20,7 @@ public class MissileCollision : MonoBehaviour {
         cameraFollowMissile = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollowMissile>();
         missileExhaustControl = GetComponentInChildren<MissileExhaustControl>();
         canvasAnimator = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Animator>();
+        portalAnimator = GameObject.FindGameObjectWithTag("Target").GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -54,8 +56,8 @@ public class MissileCollision : MonoBehaviour {
             // Make the missile dissappear
             gameObject.SetActive(false);
 
-            // Make the target dissappear
-            collision.gameObject.SetActive(false);
+            // Make the portal implode
+            portalAnimator.SetTrigger("Shrink");
 
 
             canvasAnimator.SetTrigger("LevelComplete");

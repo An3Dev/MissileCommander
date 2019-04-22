@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MissileCollision : MonoBehaviour {
 
-    public ParticleSystem explosionPrefab;
+    public GameObject explosionPrefab;
     Rigidbody2D rb;
     CameraFollowMissile cameraFollowMissile;
     MissileExhaustControl missileExhaustControl;
@@ -78,10 +78,12 @@ public class MissileCollision : MonoBehaviour {
             // Make the missile dissappear
             gameObject.SetActive(false);
 
-            
-            ParticleSystem explosion = (Instantiate(explosionPrefab, collision.GetContact(0).point, Quaternion.identity)).GetComponent<ParticleSystem>();
 
-            explosion.Play();
+            //ParticleSystem explosion = (Instantiate(explosionPrefab, collision.GetContact(0).point, Quaternion.identity)).GetComponent<ParticleSystem>();
+
+            //explosion.Play();
+
+            Instantiate(explosionPrefab, collision.GetContact(0).point, Quaternion.identity);
 
             canvasAnimator.SetTrigger("GameOver");
         }

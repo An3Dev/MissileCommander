@@ -9,6 +9,8 @@ TagManager:
   - Booster
   - AntiBooster
   - Canvas
+  - EntranceTeleporter
+  - ExitTeleporter
   layers:
   - Default
   - TransparentFX

@@ -22,19 +22,14 @@ public class MissileControls : MonoBehaviour {
     void Update () {
         
 
-        // Move to left
+        // Rotate with keyboard
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
             rb.MoveRotation(rb.rotation + Input.GetAxisRaw("Horizontal") * -rotationalForce * Time.deltaTime);
             
         } 
-        //// Move to right
-        //if (Input.GetAxisRaw("Horizontal") == 1)
-        //{
-        //    rb.MoveRotation(rb.rotation + -rotationalForce * Time.deltaTime);
-            
 
-        //}
+
 
         // If touch detected
         if (Input.touchCount > 0)

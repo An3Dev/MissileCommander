@@ -10,6 +10,7 @@ public class TimeManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        StartTime();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +28,7 @@ public class TimeManager : MonoBehaviour {
         if (rb != null)
         {
             rb.simulated = false;
+            Time.timeScale = 0;
 
         }
     }
@@ -42,7 +44,7 @@ public class TimeManager : MonoBehaviour {
         if (rb != null)
         {
             rb.simulated = true;
-
+            Time.timeScale = 1;
         }
         
     }

@@ -16,6 +16,7 @@ public class FPS : MonoBehaviour {
         float current = 0;
         current = Time.frameCount / Time.time;
         avgFrameRate = (int)current;
-        display_Text.text = avgFrameRate.ToString() + " FPS";
+        //display_Text.text = avgFrameRate.ToString() + " FPS";
+        display_Text.text = "";
     }
 }

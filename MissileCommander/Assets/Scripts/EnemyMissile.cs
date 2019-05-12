@@ -18,6 +18,14 @@ public class EnemyMissile : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
+    public void Update()
+    {
+        if (player.gameObject == null)
+        {
+            Explode();
+        }
+    }
+
     void FixedUpdate()
     {
         dir = (player.transform.position - transform.position).normalized;
@@ -32,6 +40,12 @@ public class EnemyMissile : MonoBehaviour {
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
+    {
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    void Explode()
     {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);

@@ -13,6 +13,8 @@ public class MissileCollision : MonoBehaviour {
 
     public bool gameOver = false;
 
+    public Transform exitPortal;
+
     
 	// Use this for initialization
 	void Start () {
@@ -21,6 +23,7 @@ public class MissileCollision : MonoBehaviour {
         missileExhaustControl = GetComponentInChildren<MissileExhaustControl>();
         canvasAnimator = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Animator>();
         portalAnimator = GameObject.FindGameObjectWithTag("Target").GetComponent<Animator>();
+        //exitPortal = GameObject.FindGameObjectWithTag("ExitTeleporter").transform;
     }
 	
 	// Update is called once per frame
@@ -40,6 +43,11 @@ public class MissileCollision : MonoBehaviour {
         {
             SlowDownMissile();
         }
+
+        //if (collision.tag == "EntranceTeleporter")
+        //{
+        //    transform.position = exitPortal.position;
+        //}
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -62,6 +70,8 @@ public class MissileCollision : MonoBehaviour {
 
             canvasAnimator.SetTrigger("LevelComplete");
         }
+
+        
 
 
         if (collision.collider.tag == "DestroyMissile" && !gameOver)

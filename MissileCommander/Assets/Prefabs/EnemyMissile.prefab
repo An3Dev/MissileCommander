@@ -402,7 +402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardForce: 21
   rotatingForce: 25
-  explosionPrefab: {fileID: 1745548805425934, guid: 5bd97f9b76514b24dac1d7af21e857e4,
+  explosionPrefab: {fileID: 1486087765465352, guid: 6a3dba30e226aaf4691851b2a995aae1,
     type: 2}
 --- !u!114 &114168952804619586
 MonoBehaviour:

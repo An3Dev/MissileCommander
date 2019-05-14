@@ -7,6 +7,8 @@ public class TimeManager : MonoBehaviour {
     //public Behaviour[] scriptsToDisable;
 
     Rigidbody2D rb;
+
+    float timeScale = 1;
 	// Use this for initialization
 	void Start () {
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
@@ -15,8 +17,11 @@ public class TimeManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Time.timeScale != 0)
+        {
+            Time.timeScale = timeScale;
+        }
+    }
 
     public void StopTime()
     {
@@ -28,8 +33,8 @@ public class TimeManager : MonoBehaviour {
         if (rb != null)
         {
             rb.simulated = false;
-            Time.timeScale = 0;
 
+            Time.timeScale = 0;
         }
     }
 
@@ -44,7 +49,7 @@ public class TimeManager : MonoBehaviour {
         if (rb != null)
         {
             rb.simulated = true;
-            Time.timeScale = 1;
+            Time.timeScale = timeScale;
         }
         
     }

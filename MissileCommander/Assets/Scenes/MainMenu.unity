@@ -771,7 +771,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Portal Jumper
+  m_Text: Space Missile
 --- !u!222 &365035904
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class CameraFollowMissile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = new Vector3(missile.transform.position.x, missile.transform.position.y, -10);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(missile.transform.position.x, missile.transform.position.y, -10), smoothness);
         //if (missile)
         //{
         //    Vector3 from = transform.position;

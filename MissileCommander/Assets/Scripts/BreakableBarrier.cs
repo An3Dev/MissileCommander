@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BreakableBarrier : MonoBehaviour {
 
+    public GameObject breakableBarrierExplosionPrefab;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +18,10 @@ public class BreakableBarrier : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+
+        GameObject explosion = Instantiate(breakableBarrierExplosionPrefab, transform.position, Quaternion.identity);
+        Destroy(explosion, 3);
         Destroy(gameObject);
+        
     }
 }

@@ -20,8 +20,9 @@ public class EnemyMissile : MonoBehaviour {
 
     public void Update()
     {
-        if (player.gameObject == null)
+        if (!player.gameObject.activeSelf)
         {
+            
             Explode();
         }
     }

@@ -1016,7 +1016,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -200
+      value: -209.82
       objectReference: {fileID: 0}
     - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1060,6 +1060,10 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 71.73079
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
@@ -1541,21 +1545,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 48.145996
-      objectReference: {fileID: 0}
     - target: {fileID: 1243100082526852, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
       propertyPath: m_Name
       value: Barrier (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
@@ -1573,7 +1565,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 104.08
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1613,7 +1605,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4038979067626322, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}
       propertyPath: m_LocalScale.y
-      value: 144.01453
+      value: 168.497
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c729cf25d010a4428d47967e538a4cd, type: 2}

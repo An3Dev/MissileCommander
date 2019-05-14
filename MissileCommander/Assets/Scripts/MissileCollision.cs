@@ -56,7 +56,7 @@ public class MissileCollision : MonoBehaviour {
         if (collision.collider.tag == "Target")
         {
             // Disable camera follow to prevent error
-            cameraFollowMissile.enabled = false;
+            //cameraFollowMissile.enabled = false;
 
             // Freeze missile.
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -80,7 +80,7 @@ public class MissileCollision : MonoBehaviour {
             gameOver = true;
 
             // Disable camera follow to prevent error
-            cameraFollowMissile.enabled = false;
+            //cameraFollowMissile.enabled = false;
 
             // Freeze missile.
             rb.constraints = RigidbodyConstraints2D.FreezeAll;

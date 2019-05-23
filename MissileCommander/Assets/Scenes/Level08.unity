@@ -623,6 +623,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 199282711150295932, guid: 08fe785d31ae4664ab15304b0ec9247b,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08fe785d31ae4664ab15304b0ec9247b, type: 2}
   m_IsPrefabAsset: 0
@@ -733,6 +738,26 @@ Prefab:
       propertyPath: rb
       value: 
       objectReference: {fileID: 796997004}
+    - target: {fileID: 114456131300027944, guid: 0e79314d692b7124a83bad1705ae1120,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311027337638874, guid: 0e79314d692b7124a83bad1705ae1120,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530369635359728, guid: 0e79314d692b7124a83bad1705ae1120,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114920385974081818, guid: 0e79314d692b7124a83bad1705ae1120,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e79314d692b7124a83bad1705ae1120, type: 2}
   m_IsPrefabAsset: 0
@@ -1336,9 +1361,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1295548510814654, guid: b38762f85ce083c4cbf3feda9614c4d4, type: 2}
-      propertyPath: m_Name
-      value: Booster
+    - target: {fileID: 212482373000584896, guid: b38762f85ce083c4cbf3feda9614c4d4,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b38762f85ce083c4cbf3feda9614c4d4, type: 2}
